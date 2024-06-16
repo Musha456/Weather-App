@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --primary-color: #1B75B7;
+    --secondary-color: #1e272e;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+html{
+    font-size: 62.5%;
+}
+
+.row{
+    margin: 0;
+}
+
+.main_menu{
+    background-color: var(--primary-color);
+}
+
+.brand{
+    color: #fff;
+}
+.navbar{
+    --color: var(secondary-color);
+    background-color: var(--primary-color);
+    padding: 2rem 0;
+}
+
+.navbar li{
+    margin-left: 20px;
+}
+
+.navbar a{
+    --color: var(secondary-color);
+    font-size: 1.8rem;
+}
+.navbar a.active{
+    color: #fff !important;
+}
+
+.navbar-toggler{
+    background-color: gray; 
+}
+
+.fa-snowflake-o{
+    transition: all linear;
+    animation: rot 2s linear infinite;
+}
+
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* ----------------------------------------- main header left -----------------------------------------  */
+
+.main_header_left{
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main_header_left p{
+    font-size: 2rem;
+}
+.main_header_left h1{
+    font-size: 4rem;
+    margin: 1rem 0 4rem 0;
+    text-transform: capitalize;
+}
+.main_header_left .text-clr{
+    color: var(--primary-color);
+}
+.main_header_left button{
+    border: none;
+    color: var(--primary-color);
+    padding: 0.8rem 1.8rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0px 6px 6px -6px #000;
+}
+.main_header_left button:hover{
+    transition: 0.1s;
+    box-shadow: 0 8px 6px -6px var(--primary-color);
+}
+
+/* ----------------------------------------- main header right -----------------------------------------  */
+
+.main_header_right{
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.main_header_right figure img{
+    filter: drop-shadow(0 0.5rem 1rem rgba(0,0,0,0.2));
+}
+
+/* ----------------------------------------- footer code ----------------------------------------- */
+footer {
+    width: 100%;
+    background-color: var(--primary-color);
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 5rem;
+    font-size: 1.4rem;
+}
+
+/* ----------------------------------------- responsive code ----------------------------------------- */
+
+@media (max-width: 768){
+    .main_header_left{
+        height: auto;
+        margin: 5rem 0;
+    }
+    .main_header_right{
+        height: auto;
+        margin-top: 3rem;
+    }
+}
+
+/* ----------------------------------------- weather page ----------------------------------------- */
+
+.temp_form{
+    width: 50%;
+    position: relative;
+    margin: 10rem auto 6rem;
+}
+.temp_form input[type="text"]{
+    width: 100%;
+    padding: 2rem 5rem 2rem 2rem;
+    background: #1e202b;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-size: 1.7rem;
+    border-radius: 3rem;
+}
+
+::placeholder{
+    color: #bfc1c8;
+}
+
+.temp_form input[type="submit"]{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    background: #009ad8;
+    padding: 0 3rem;
+    border-radius: 3rem;
+    color: white;
+    font-size: 1.6rem;
+}
+.temp_form input[type="submit"]:hover{
+
+}
+
+.tempInfo{
+    width: 40rem;
+    margin: auto;
+    min-height: 20rem;
+    background-color: #323544;
+    border-radius: 1rem;
+}
+
+.top_layer{
+    width: 100%;
+    background: #1e202b;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 800;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+.top_layer p{
+    color: #fff;
+    font-weight: 300;
+    padding: 2rem 0;
+}
+.main_layer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 2rem;
+}
+
+.main_layer #city_name{
+    padding: 2rem 0;
+    color: #bfc1c8;
+    font-weight: 300;
+    font-size: 2rem;
+}
+.main_layer .middle_layer{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+.main_layer .middle_layer p,
+.main_layer .middle_layer .fa{
+    font-size: 5rem;
+    font-weight: 900;
+}
+.fa{
+    column-rule: #009ad8;
+}
+sup{
+    font-size: 6rem;
+    margin-top: -2rem;
+}
+.data_hide{
+    visibility: hidden;
+    transition: all 0.3s linear;    
+}
